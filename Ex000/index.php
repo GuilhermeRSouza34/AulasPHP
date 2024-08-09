@@ -8,7 +8,7 @@
 <body>
     <h1>
         <?php 
-            echo"Ola Mundo";
+            echo"Ola Mundo \u{1f30e}";
         ?>
     </h1>
     <p>Iniciando o curso de php</p>

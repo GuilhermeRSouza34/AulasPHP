@@ -8,8 +8,10 @@
 <body>
     <h1>Exemplo de PHP</h1>
     <?php 
+        date_default_timezone_set("America/Sao_Paulo");
+        // Mostrar a data e hora atual
         echo"Hoje é dia " . date("y-m-d");
-        echo " e a hora é ". date("g:i:s");
+        echo " e a hora é ". date("g:i:s T");
     ?>
 </body>
 </html>

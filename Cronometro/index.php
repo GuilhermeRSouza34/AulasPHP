@@ -7,7 +7,7 @@
     <title>Cronômetro</title>
     
     <!-- Link para o arquivo de estilo CSS externo -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Container principal da página -->

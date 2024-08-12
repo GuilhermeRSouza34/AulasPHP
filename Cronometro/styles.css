@@ -1,0 +1,70 @@
+/* Estilização global para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte usada */
+    background-color: #f4f4f4; /* Define a cor de fundo */
+    display: flex; /* Define um layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura como 100% da viewport */
+    margin: 0; /* Remove margens padrões */
+}
+
+/* Estilização do container principal */
+.container {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    text-align: center; /* Centraliza o texto */
+    max-width: 300px; /* Largura máxima */
+    width: 100%; /* Largura 100% do container */
+}
+
+/* Estilização do título */
+h1 {
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilização do cronômetro */
+.timer {
+    font-size: 48px; /* Tamanho da fonte do cronômetro */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilização do grupo de entrada (label + input) */
+.input-group {
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilização do label */
+label {
+    display: block; /* Exibe como bloco */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilização do campo de entrada */
+input[type="number"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilização do botão */
+button {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto branca */
+    background-color: #e74c3c; /* Cor de fundo vermelha */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+}
+
+/* Estilização do botão ao passar o mouse */
+button:hover {
+    background-color: #c0392b; /* Cor de fundo vermelha mais escura */
+}

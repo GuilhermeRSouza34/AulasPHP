@@ -53,7 +53,7 @@ input[type="number"] {
     border-radius: 5px; /* Bordas arredondadas */
 }
 
-/* Estilização do botão */
+/* Estilização dos botões */
 button {
     padding: 10px 20px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
@@ -62,9 +62,15 @@ button {
     border: none; /* Remove borda */
     border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer; /* Muda o cursor para mãozinha */
+    margin: 5px; /* Adiciona espaçamento entre os botões */
 }
 
-/* Estilização do botão ao passar o mouse */
+/* Estilização dos botões ao passar o mouse */
 button:hover {
     background-color: #c0392b; /* Cor de fundo vermelha mais escura */
+}
+
+/* Estilização do grupo de controles do cronômetro */
+.controls {
+    margin-top: 20px; /* Espaçamento superior */
 }

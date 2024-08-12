@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados da página -->
     <meta charset="UTF-8">
-    <title>Cronômetro de Contagem Regressiva</title>
-    <script>
-        // Função que inicia a contagem regressiva
-        function startTimer(duration, display) {
-            var timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10); // Converte os segundos restantes em minutos
-                seconds = parseInt(timer % 60, 10); // Obtém os segundos restantes
-
-                // Formata os minutos e segundos para sempre mostrar dois dígitos
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds; // Atualiza o display com o tempo restante
-
-                // Reduz o tempo em um segundo a cada iteração
-                if (--timer < 0) {
-                    timer = 0; // Para a contagem quando o tempo chega a zero
-                    alert("Tempo esgotado!"); // Exibe um alerta quando o tempo se esgota
-                }
-            }, 1000); // Intervalo de 1 segundo para cada iteração
-        }
-
-        // Quando a página é carregada, o cronômetro é iniciado
-        window.onload = function () {
-            var timeInMinutes = 1; // Define o tempo inicial em minutos
-            var timeInSeconds = timeInMinutes * 60; // Converte os minutos para segundos
-            var display = document.querySelector('#time'); // Obtém o elemento onde o tempo será exibido
-            startTimer(timeInSeconds, display); // Inicia a contagem regressiva
-        };
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    
+    <!-- Link para o arquivo de estilo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cronômetro de Contagem Regressiva</h1>
-    <!-- Exibe o tempo restante -->
-    <div>Tempo restante: <span id="time"></span> minutos</div>
+    <!-- Container principal da página -->
+    <div class="container">
+        <!-- Título da página -->
+        <h1>Cronômetro</h1>
+        
+        <!-- Área que exibe o tempo do cronômetro -->
+        <div class="timer">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+        
+        <!-- Formulário para o usuário definir o tempo do cronômetro -->
+        <form id="timeForm" method="POST">
+            <div class="input-group">
+                <label for="timeInput">Tempo (em segundos):</label>
+                <!-- Campo de entrada para o usuário definir o tempo em segundos -->
+                <input type="number" id="timeInput" name="timeInput" min="1" placeholder="Digite o tempo" required>
+            </div>
+            <!-- Botão para iniciar o cronômetro -->
+            <button type="submit">Iniciar</button>
+        </form>
+    </div>
+
+    <!-- Inclusão do arquivo de script JavaScript externo -->
+    <script src="script.js"></script>
+
+    <?php
+    // Verifica se o formulário foi enviado (método POST)
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Converte o valor enviado pelo usuário para um número inteiro
+        $timeInSeconds = intval($_POST["timeInput"]);
+        
+        // Gera um script JavaScript para iniciar o cronômetro com o tempo definido
+        echo "<script>startTimer($timeInSeconds);</script>";
+    }
+    ?>
 </body>
 </html>

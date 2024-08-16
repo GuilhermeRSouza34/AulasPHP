@@ -34,5 +34,5 @@ O repositório contém os seguintes módulos e exemplos:
 6. **Projetos Finais**:
    - Aplicação CRUD completa
    - Sistema de login e registro de usuários
-   - Mini projeto de e-commerce
+   - Mini projeto de e-commerce.
 
